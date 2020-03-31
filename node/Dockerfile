@@ -5,3 +5,6 @@ RUN sudo npm install -g @sentry/cli --unsafe-perm
 
 # Install Python PIP
 RUN sudo apt-get update && sudo apt-get install -y python3-pip
+
+# Install cfn-lint
+RUN pip3 install cfn-lint

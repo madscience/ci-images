@@ -12,3 +12,6 @@ RUN pip3 install cfn-lint
 # Install tf-helper
 RUN curl -SL https://github.com/hashicorp-community/tf-helper/archive/0.2.8.tar.gz | tar -xzC ~/ \
     && sudo ln -s ~/tf-helper-0.2.8/tfh/bin/tfh /usr/bin/tfh
+
+# Install aws-cli
+RUN pip3 install awscli

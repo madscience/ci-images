@@ -15,3 +15,6 @@ RUN curl -SL https://github.com/hashicorp-community/tf-helper/archive/0.2.8.tar.
 
 # Install aws-cli
 RUN pip3 install awscli
+
+# Install Colordiff
+RUN sudo apt-get update && sudo apt-get install -y colordiff

@@ -23,3 +23,21 @@ jobs:
           repository: madscience/ci-images/node-gha
           tag_with_ref: true
           push: ${{ startsWith(github.ref, 'refs/tags/') }}
+
+      - name: Publish release tags to GitHub Package Registry
+        uses: flownative/action-docker-publish-semver@v1.2.0
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          tag_ref: ${{ github.ref }}
+          tag_latest: yes
+          #tag_custom: 'some-custom-tag'
+
+          source_image_name: docker.pkg.github.com/madscience/ci-images/node-gha
+          source_registry_username: ${{ github.actor }}
+          source_registry_password: ${{ secrets.GITHUB_TOKEN }}
+          source_registry_endpoint: https://docker.pkg.github.com/v2/
+
+          target_image_name: docker.pkg.github.com/madscience/ci-images/node-gha
+          target_registry_username: ${{ github.actor }}
+          target_registry_password: ${{ secrets.GITHUB_TOKEN }}
+          target_registry_endpoint: https://docker.pkg.github.com/v2/

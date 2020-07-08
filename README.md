@@ -1,2 +1,2 @@
-# circleci-images
-Docker images for CircleCI
+# ci-images
+Docker images for CI environments.

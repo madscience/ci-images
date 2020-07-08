@@ -14,7 +14,7 @@ jobs:
       - name: Build Docker image
         uses: docker/build-push-action@v1.1.0
         with:
-          dockerfile: node-gha/Dockerfile
+          path: node-gha
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com

@@ -17,6 +17,7 @@ jobs:
           dockerfile: node-gha/Dockerfile
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          repository: docker.pkg.github.com/madscience/ci-images
+          registry: docker.pkg.github.com
+          repository: madscience/ci-images/node-gha
           tag_with_ref: true
           push: ${{ startsWith(github.ref, 'refs/tags/') }}

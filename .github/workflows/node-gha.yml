@@ -15,6 +15,7 @@ jobs:
         uses: docker/build-push-action@v1.1.0
         with:
           dockerfile: node-gha/Dockerfile
+          username: ${{ env.GITHUB_ACTOR }}
           password: ${{ secrets.GITHUB_TOKEN }}
           repository: docker.pkg.github.com/madscience/ci-images
           tag_with_ref: true

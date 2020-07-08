@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - node-gha/Dockerfile
+      - .github/workflows/node-gha.yml
 
 jobs:
   build:

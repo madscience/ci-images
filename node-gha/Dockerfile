@@ -1,4 +1,4 @@
-FROM node:16.3-buster
+FROM node:16.4-buster
 
 # make Apt non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/90circleci \

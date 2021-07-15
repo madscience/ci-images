@@ -1,4 +1,4 @@
-FROM circleci/node:16.3-buster
+FROM circleci/node:16.5-buster
 
 # Install sentry-cli
 RUN sudo npm install -g @sentry/cli --unsafe-perm
